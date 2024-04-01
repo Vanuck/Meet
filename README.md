@@ -65,3 +65,7 @@ Scenario: Select a chart to show the number of events in a specific city
 Given the Meet App is open
 When the user selects the "Charts" option
 Then the Meet App will show the number of upcoming events in that city via a chart.
+
+**Using serverless functions:**
+
+This Meet App will use serverless functions that will be responsible for securely managing user access, obtaining and refreshing OAuth2 tokens, and ensuring the security of interactions between your React application and the Google Calendar API. The serverless architecture offers benefits such as easy scalability, efficient resource utilization, and cost-effectiveness, as you only pay for the actual execution of functions rather than maintaining a dedicated server infrastructure. AWS Lambda will be the chosen cloud-service provider for implementing these serverless functions, making the app's architecture more scalable and cost-effective.
