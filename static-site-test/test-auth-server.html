@@ -51,7 +51,7 @@
       const resultLink = document.getElementById("authURL");
 
       const getAuthURL =
-        "https://pa83s4e43h.execute-api.us-east-2.amazonaws.com/dev/api/get-auth-url";
+        "https://pa83s4e43h.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url";
 
       getAuthUrlButton.onclick = function () {
         fetch(getAuthURL)
@@ -74,7 +74,7 @@
       const getAccessToken = document.getElementById("getToken");
       const accessTokenElement = document.getElementById("accessToken");
       const getToken =
-        "https://pa83s4e43h.execute-api.us-east-2.amazonaws.com/dev/api/token";
+        "https://pa83s4e43h.execute-api.us-west-2.amazonaws.com/dev/api/token";
 
       getAccessToken.onclick = function () {
         let code = codeValue.value;
@@ -97,7 +97,7 @@
       const getEvents = document.getElementById("getEvents");
       const events = document.getElementById("events");
       const getCalendarEvents =
-        "https://pa83s4e43h.execute-api.us-east-2.amazonaws.com/dev/api/get-events";
+        "https://pa83s4e43h.execute-api.us-west-2.amazonaws.com/dev/api/get-events";
 
       getEvents.onclick = function () {
         const { access_token } = JSON.parse(accessTokenElement.innerText);
