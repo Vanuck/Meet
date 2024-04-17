@@ -13,8 +13,9 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
         type="text"
         className="textboxNumber"
         placeholder="Enter a number"
-        value={query}
+        defaultValue="32"
         onChange={handleInputChanged}
+        data-testid="numberOfEventsInput"
       />
     </div>
   );
