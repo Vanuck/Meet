@@ -25,6 +25,14 @@ ul {
   list-style: none;
 }
 
+.alerts-container {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 250px;
+  z-index: 1000;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
