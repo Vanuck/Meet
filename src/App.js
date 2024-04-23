@@ -14,21 +14,19 @@ const App = () => {
   const [currentCity, setCurrentCity] = useState("See all cities");
   const [infoAlert, setInfoAlert] = useState("");
   const [errorAlert, setErrorAlert] = useState("");
-  const [warningAlert, setWarningError] = useState("");
+  const [warningAlert, setWarningAlert] = useState("");
 
   useEffect(() => {
     if (navigator.onLine) {
       // set the warning alert message to an empty string ""
-      setWarningError("");
+      setWarningAlert("");
     } else {
       // set the warning alert message to a non-empty string
-      setWarningError("You are gone offline, events are loaded from cache!");
+      setWarningAlert("You are now in offline mode, loading from cache!");
     }
     fetchData();
-    // eslint-disable-next-line no-use-before-define
-  }, [currentCity, currentNOE, fetchData]);
+  }, [currentCity, currentNOE]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents =
@@ -44,11 +42,7 @@ const App = () => {
       <h1>Meet App</h1>
       <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert} /> : null}
-      </div>
-      <div className="alerts-container">
         {errorAlert.length ? <ErrorAlert text={errorAlert} /> : null}
-      </div>
-      <div className="alerts-container">
         {warningAlert.length ? <WarningAlert text={warningAlert} /> : null}
       </div>
 
