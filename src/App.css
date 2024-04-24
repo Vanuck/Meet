@@ -33,6 +33,13 @@ ul {
   z-index: 1000;
 }
 
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
